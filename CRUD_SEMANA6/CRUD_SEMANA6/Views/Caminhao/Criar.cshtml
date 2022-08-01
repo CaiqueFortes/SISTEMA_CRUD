@@ -1,0 +1,29 @@
+﻿@model CaminhaoModel
+@{
+    ViewData["Title"] = "Criar Caminhão";
+}
+<div class="text-center">
+
+    <h1 class="display-4">Cadastrar caminhão</h1>
+
+    
+</div>
+
+<form asp-controller="Caminhao" asp-action="Criar" method="post">
+  <div class="form-group">
+    <label for="Nome">Nome</label>
+    <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do caminhão">
+  </div>
+    <div class="form-group">
+    <label for="Descrição">Descrição</label>
+    <input type="text" asp-for="Descricao" class="form-control" placeholder="Digite a descrição do caminhão">
+  </div>
+    <div class="form-group">
+    <label for="Nome">Nome</label>
+    <input type="date" asp-for="DatadeCriacao" class="form-control" placeholder="Digite a data de criação">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Adicionar</button>
+  <a class="btn btn-secundary" asp-controller="Caminhao" asp-action="Index" role="button">Voltar</a>
+</form>
+
